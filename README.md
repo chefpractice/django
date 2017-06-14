@@ -1,0 +1,2 @@
+# django
+installing django 
