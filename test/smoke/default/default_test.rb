@@ -23,5 +23,5 @@ end
 
 describe command('django-admin --version') do
   it { should exist }
-  its('matcher') { should eq '/1.6.1/' }
+  its('stdout') { should match (/1.6.1/) }
 end
