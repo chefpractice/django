@@ -1,6 +1,7 @@
 #
 # Cookbook:: django
-# Recipe:: default
+# Recipe:: install_packages
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
-include_recipe 'django::install_packages'
+package 'epel-release'
+package 'python-django'
