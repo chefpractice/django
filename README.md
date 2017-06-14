@@ -1,2 +1,4 @@
 # django
-installing django 
+
+TODO: Enter the cookbook description here.
+
