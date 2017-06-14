@@ -6,8 +6,8 @@
 
 require 'spec_helper'
 
-describe 'django::default' do
-  context 'When all attributes are default, on an Ubuntu 16.04' do
+describe 'django::install_pip' do
+  context 'When all attributes are default, on an centos 7.2' do
     let(:chef_run) do
       # for a complete list of available platforms and versions see:
       # https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
@@ -19,13 +19,14 @@ describe 'django::default' do
       expect { chef_run }.to_not raise_error
     end
 
-    it ' installs epel-release and python-pip' do
-      expect(chef_run).to install_package( 'epel-release' )
-      expect(chef_run).to install_package( 'python-django' )
-    end
-    # it ' installs django framework ' do
-    #   expect(chef_run).to run_execute( "pip install django" )
-    # end
+   it ' installs epel-release and python-pip' do
+     expect(chef_run).to install_package( 'epel-release' )
+     expect(chef_run).to install_package( 'python-pip' )
+   end
+   it ' installs django framework ' do
+     expect(chef_run).to run_execute( "pip install django" )
+   end
+
 
   end
 end

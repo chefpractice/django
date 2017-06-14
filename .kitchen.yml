@@ -21,5 +21,12 @@ suites:
       - recipe[django::default]
     verifier:
       inspec_tests:
+       - test/smoke/default
+    attributes:
+  - name: install_pip
+    run_list:
+      - recipe[django::install_pip]
+    verifier:
+      inspec_tests:
         - test/smoke/default
     attributes:
